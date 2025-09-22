@@ -3,105 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>You're Invited!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Wedding Invitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Scheherazade+New&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
-      color: #333;
-      text-align: center;
+      font-family: 'Scheherazade New', serif;
+      background: linear-gradient(to bottom, #fff8f0, #fbeee6);
+      color: #4b2e2e;
     }
-
     header {
-      padding: 50px 20px 20px;
+      text-align: center;
+      padding: 60px 20px;
+      background: url('https://i.imgur.com/1YcZQkZ.png') no-repeat center top;
+      background-size: cover;
+      animation: fadeIn 2s ease-in-out;
     }
-
-    h1 {
+    header h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 3em;
-      color: #b03060;
+      margin-bottom: 10px;
+      color: #8b0000;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 0;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .venue {
+      background-color: #fff5f5;
+      border-top: 2px solid #d4af37;
+    }
+    .venue h2 {
+      font-size: 2em;
       margin-bottom: 10px;
     }
-
-    .animation {
-      margin: 20px auto;
-      width: 100px;
-      height: 100px;
-      background: url="https://cdn-icons-png.flaticon.com/512/3176/3176296.png" no-repeat center;
-      background-size: contain;
-      animation: pulse 2s infinite;
+    .venue p {
+      font-size: 1.1em;
+      margin: 5px 0;
     }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-
-    .details {
-      margin: 30px auto;
-      max-width: 600px;
-      font-size: 1.2em;
-    }
-
-    .map {
-      margin: 30px auto;
-      max-width: 600px;
-    }
-
-    .btn {
-      display: inline-block;
+    .map-button {
       margin-top: 20px;
       padding: 12px 24px;
-      background-color: #b03060;
+      background-color: #d4af37;
       color: white;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       font-size: 1em;
-      text-decoration: none;
-      transition: background 0.3s;
+      cursor: pointer;
     }
-
-    .btn:hover {
-      background-color: #902050;
+    .map-button:hover {
+      background-color: #bfa22e;
     }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #666;
+    .credits {
+      background-color: #f0e6d2;
+      border-top: 2px solid #8b0000;
+      padding: 30px 20px;
+      font-size: 1em;
+    }
+    .credits h3 {
+      margin-bottom: 10px;
+      font-size: 1.5em;
+    }
+    .credits p {
+      margin: 5px 0;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>You're Invited!</h1>
-    <div class="animation"></div>
-    <p>Join us in celebrating our wedding</p>
+    <h1>Ahmed & Fatima</h1>
+    <p>With the blessings of Allah, we invite you to celebrate our Nikah</p>
   </header>
 
-  <section class="details">
-    <p><strong>Venue:</strong> The Royal Garden, Kurla, Mumbai</p>
-    <p><strong>Date:</strong> 15th December 2025</p>
-    <p><strong>Time:</strong> 6:00 PM onwards</p>
-    <p><strong>Dress Code:</strong> Traditional Elegance</p>
-    <a class="btn" href="https://www.google.com/maps?q=The+Royal+Garden+Kurla+Mumbai" target="_blank">Get Directions</a>
+  <section class="venue">
+    <h2>Wedding Details</h2>
+    <p><strong>Date:</strong> 15th October 2025</p>
+    <p><strong>Time:</strong> 7:00 PM onwards</p>
+    <p><strong>Venue:</strong> Royal Orchid Banquet, Kurla, Mumbai</p>
+    <button class="map-button" onclick="window.open('https://www.google.com/maps?q=Royal+Orchid+Banquet+Kurla+Mumbai')">📍 Open in Google Maps</button>
   </section>
 
-  <section class="map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.123456789!2d72.882123!3d19.072345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8f123456789%3A0xabcdef123456789!2sThe+Royal+Garden+Kurla!5e0!3m2!1sen!2sin!4v1234567890"
-      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
+  <section class="credits">
+    <h3>Created By</h3>
+    <p><strong>Name:</strong> Your Name</p>
+    <p><strong>Email:</strong> yourname@example.com</p>
+    <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/yourid" target="_blank">@yourid</a></p>
   </section>
-
-  <footer>
-    <p>With love, <strong>Priya & Aarav</strong></p>
-    <p>#PriyaWedsAarav</p>
-  </footer>
 
 </body>
 </html>
