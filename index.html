@@ -6,60 +6,74 @@
   <title>You're Invited!</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    <body>
-  .animation {
-    position: relative;
-    margin: 20px auto;
-    width: 120px;
-    height: 120px;
-    background: url("https://cdn-icons-png.flaticon.com/512/3448/3448590.png") no-repeat center;
-    background-size: contain;
-    animation: floatMoon 3s ease-in-out infinite;
-  }
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+      color: #333;
+      text-align: center;
+    }
 
-  @keyframes floatMoon {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-  }
+    header {
+      padding: 50px 20px 20px;
+    }
 
-  .sparkles {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 120px;
-    pointer-events: none;
-  }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #b03060;
+      margin-bottom: 10px;
+    }
 
-  .sparkles::before, .sparkles::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: gold;
-    border-radius: 50%;
-    animation: twinkle 2s infinite ease-in-out;
-  }
+    .animation {
+      margin: 20px auto;
+      width: 100px;
+      height: 100px;
+      background: url="https://cdn-icons-png.flaticon.com/512/3176/3176296.png" no-repeat center;
+      background-size: contain;
+      animation: pulse 2s infinite;
+    }
 
-  .sparkles::before {
-    top: 20px;
-    left: 30px;
-    animation-delay: 0.5s;
-  }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
 
-  .sparkles::after {
-    top: 70px;
-    left: 80px;
-    animation-delay: 1s;
-  }
+    .details {
+      margin: 30px auto;
+      max-width: 600px;
+      font-size: 1.2em;
+    }
 
-  @keyframes twinkle {
-    0%, 100% { opacity: 0.2; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.5); }
-  }
-</style>
+    .map {
+      margin: 30px auto;
+      max-width: 600px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #b03060;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #902050;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
 
