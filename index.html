@@ -1,107 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>You're Invited!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
-      color: #333;
-      text-align: center;
-    }
+<style>
+  .animation {
+    position: relative;
+    margin: 20px auto;
+    width: 120px;
+    height: 120px;
+    background: url("https://cdn-icons-png.flaticon.com/512/3448/3448590.png") no-repeat center;
+    background-size: contain;
+    animation: floatMoon 3s ease-in-out infinite;
+  }
 
-    header {
-      padding: 50px 20px 20px;
-    }
+  @keyframes floatMoon {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
 
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3em;
-      color: #b03060;
-      margin-bottom: 10px;
-    }
+  .sparkles {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    pointer-events: none;
+  }
 
-    .animation {
-      margin: 20px auto;
-      width: 100px;
-      height: 100px;
-      background: url="https://cdn-icons-png.flaticon.com/512/3176/3176296.png" no-repeat center;
-      background-size: contain;
-      animation: pulse 2s infinite;
-    }
+  .sparkles::before, .sparkles::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: gold;
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+  }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
+  .sparkles::before {
+    top: 20px;
+    left: 30px;
+    animation-delay: 0.5s;
+  }
 
-    .details {
-      margin: 30px auto;
-      max-width: 600px;
-      font-size: 1.2em;
-    }
+  .sparkles::after {
+    top: 70px;
+    left: 80px;
+    animation-delay: 1s;
+  }
 
-    .map {
-      margin: 30px auto;
-      max-width: 600px;
-    }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+  }
+</style>
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #b03060;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 1em;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #902050;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #666;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>You're Invited!</h1>
-    <div class="animation"></div>
-    <p>Join us in celebrating our wedding</p>
-  </header>
-
-  <section class="details">
-    <p><strong>Venue:</strong> The Royal Garden, Kurla, Mumbai</p>
-    <p><strong>Date:</strong> 15th December 2025</p>
-    <p><strong>Time:</strong> 6:00 PM onwards</p>
-    <p><strong>Dress Code:</strong> Traditional Elegance</p>
-    <a class="btn" href="https://www.google.com/maps?q=The+Royal+Garden+Kurla+Mumbai" target="_blank">Get Directions</a>
-  </section>
-
-  <section class="map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.123456789!2d72.882123!3d19.072345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8f123456789%3A0xabcdef123456789!2sThe+Royal+Garden+Kurla!5e0!3m2!1sen!2sin!4v1234567890"
-      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
-  </section>
-
-  <footer>
-    <p>With love, <strong>Priya & Aarav</strong></p>
-    <p>#PriyaWedsAarav</p>
-  </footer>
-
-</body>
-</html>
+<header>
+  <h1>You're Invited!</h1>
+  <div class="animation">
+    <div class="sparkles"></div>
+  </div>
+  <p>Join us in celebrating our wedding</p>
+</header>
