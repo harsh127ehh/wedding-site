@@ -3,48 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wedding Invitation</title>
+  <title>Ahmed & Fatima's Wedding</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Scheherazade+New&display=swap" rel="stylesheet">
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%;
+      scroll-behavior: smooth;
       font-family: 'Scheherazade New', serif;
-      background: linear-gradient(to bottom, #fff8f0, #fbeee6);
+      background-color: #fff8f0;
       color: #4b2e2e;
+      overflow: hidden;
     }
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: url('https://i.imgur.com/1YcZQkZ.png') no-repeat center top;
-      background-size: cover;
+
+    main {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+    }
+
+    section {
+      scroll-snap-align: start;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    #intro {
+      background: linear-gradient(to bottom, #fff8f0, #fbeee6);
       animation: fadeIn 2s ease-in-out;
     }
-    header h1 {
+
+    #intro h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 3em;
-      margin-bottom: 10px;
+      font-size: 4em;
       color: #8b0000;
     }
-    header p {
+
+    #intro p {
       font-size: 1.2em;
-      margin-top: 0;
+      margin-top: 10px;
     }
-    section {
-      padding: 40px 20px;
-      text-align: center;
+
+    #venue {
+      background: url('https://i.imgur.com/1YcZQkZ.png') no-repeat center center;
+      background-size: cover;
+      color: white;
+      text-shadow: 1px 1px 3px #000;
     }
-    .venue {
-      background-color: #fff5f5;
-      border-top: 2px solid #d4af37;
-    }
-    .venue h2 {
-      font-size: 2em;
+
+    #venue h2 {
+      font-size: 2.5em;
       margin-bottom: 10px;
     }
-    .venue p {
-      font-size: 1.1em;
-      margin: 5px 0;
+
+    #venue p {
+      font-size: 1.2em;
     }
+
     .map-button {
       margin-top: 20px;
       padding: 12px 24px;
@@ -55,36 +76,37 @@
       font-size: 1em;
       cursor: pointer;
     }
-    .map-button:hover {
-      background-color: #bfa22e;
-    }
-    .credits {
+
+    #credits {
       background-color: #f0e6d2;
-      border-top: 2px solid #8b0000;
-      padding: 30px 20px;
-      font-size: 1em;
+      color: #4b2e2e;
     }
-    .credits h3 {
+
+    #credits h3 {
+      font-size: 2em;
       margin-bottom: 10px;
-      font-size: 1.5em;
     }
-    .credits p {
+
+    #credits p {
+      font-size: 1em;
       margin: 5px 0;
     }
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <header>
+<main>
+  <section id="intro">
     <h1>Ahmed & Fatima</h1>
     <p>With the blessings of Allah, we invite you to celebrate our Nikah</p>
-  </header>
+  </section>
 
-  <section class="venue">
+  <section id="venue">
     <h2>Wedding Details</h2>
     <p><strong>Date:</strong> 15th October 2025</p>
     <p><strong>Time:</strong> 7:00 PM onwards</p>
@@ -92,13 +114,14 @@
     <button class="map-button" onclick="window.open('https://www.google.com/maps?q=Royal+Orchid+Banquet+Kurla+Mumbai')">📍 Open in Google Maps</button>
   </section>
 
-  <section class="credits">
+  <section id="credits">
     <h3>Created By</h3>
     <p><strong>Name:</strong> Your Name</p>
     <p><strong>Email:</strong> yourname@example.com</p>
     <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
     <p><strong>Instagram:</strong> <a href="https://instagram.com/yourid" target="_blank">@yourid</a></p>
   </section>
+</main>
 
 </body>
 </html>
